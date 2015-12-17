@@ -1,0 +1,25 @@
+/*
+stylesheet for use with Synergexis responsive youtube shortcode plugin.
+*/
+
+.synvid_container{
+	 
+}
+ 
+.synVid_youtube_container,
+.synVid_vimeo_container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+ 
+.synVid_youtube_container iframe,
+.synVid_vimeo_container iframe {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
