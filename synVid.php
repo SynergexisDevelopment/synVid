@@ -8,8 +8,16 @@ Author: Jason Foster and Shane Phillips
 Author URI: http://synergexis.com
 License: Reserved
 */
-function synVid_youtube_shortcode($atts)
-{
+
+function synvid_shortcode($atts){
+	extract(shortcode_atts(array(
+        'vid' => '',
+    ), $atts));
+    return '<div class="synVid_container synVid_source_container"><video controls><source src="movie.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+    <!--.synVid-source-container-->';
+}
+
+function synVid_youtube_shortcode($atts){
     extract(shortcode_atts(array(
         'vid' => '',
         'modestbranding' => '1',
@@ -31,8 +39,7 @@ function synVid_youtube_shortcode($atts)
 }
 add_shortcode('synVid-youtube', 'synVid_youtube_shortcode');
 
-function synVid_vimeo_shortcode($atts)
-{
+function synVid_vimeo_shortcode($atts){
     extract(shortcode_atts(array(
         'vid' => '',
         'badge' => '0',
@@ -54,8 +61,7 @@ function synVid_vimeo_shortcode($atts)
 }
 add_shortcode('synVid-vimeo', 'synVid_vimeo_shortcode');
 
-function synVid_add_stylesheet()
-{
+function synVid_add_stylesheet(){
     wp_register_style('synVid_style', plugins_url('synVid.css', __FILE__));
     wp_enqueue_style('synVid_style');
 }
