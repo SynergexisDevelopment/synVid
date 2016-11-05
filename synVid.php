@@ -9,6 +9,16 @@ Author URI: http://synergexis.com
 License: Reserved
 */
 
+
+function synvid_shortcode($atts){
+	extract(shortcode_atts(array(
+        'vid' => '',
+    ), $atts));
+    return '<div class="synVid_container synVid_source_container"><video controls><source src="movie.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+    <!--.synVid-source-container-->';
+}
+add_shortcode('synVid-youtube', 'synVid_youtube_shortcode');
+
 function synVid_youtube_shortcode($atts){
     extract(shortcode_atts(array(
         'vid' => '',
