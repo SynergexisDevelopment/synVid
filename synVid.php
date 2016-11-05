@@ -47,7 +47,7 @@ function synVid_vimeo_shortcode($atts){
     
     $formatted_query = implode('&', $encoded_query);
     
-    return '<div class="synVid_container synVid_vimeo_container"><iframe src="//player.vimeo.com/video/' . $vid . '?badge=' . $badge . '&portrait=' . $portrait . '&title=' . $title . '&' . $expanded_query . '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    return '<div class="synVid_container synVid_vimeo_container"><iframe src="//player.vimeo.com/video/' . $vid . '?badge=' . $badge . '&portrait=' . $portrait . '&title=' . $title . '&' . $formatted_query . '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
     <!--.synVid-vimeo-container-->';
     
 }
